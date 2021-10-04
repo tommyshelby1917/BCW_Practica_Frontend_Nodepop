@@ -26,12 +26,13 @@ export default {
     try {
       const data = await response.json()
       if (response.ok) {
+        console.log("Request to backend was succesfull");
         return data;
       } else {
         throw new Error(data.message);
       }
     } catch (error) {
-      throw errror;
+      throw error;
     }
   },
 
