@@ -39,5 +39,12 @@ export default {
   registerUser: async function (username, password) {
     const url = 'http://localhost:8000/auth/register';
     return await this.post(url, { username, password });
+  },
+
+  login: async function (username, password) {
+    const url = 'http://localhost:8000/auth/login';
+    const data = await this.post(url, { username, password });
+    const token = data.accesToken;
+    localStorage.setItem('AUTH_TOKEN', token);
   }
 }

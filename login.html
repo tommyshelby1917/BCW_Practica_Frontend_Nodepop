@@ -11,6 +11,25 @@
 </head>
 <body>
   
-  <script src="./js/login.js"></script>
+  <!-- TODO: Succes error? -->
+  <!-- Message error -->
+  <div class="error-message"></div>
+
+  <!-- Login form -->
+  <div class="container-form">
+    <form novalidate>
+      <div class="user-div">
+        <input type="text" name="username" id="username" placeholder="Choose a username" required autofocus>
+      </div>
+      <div class="password-div">
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <div class="submit-div">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+  
+  <script type="module" src="./js/login.js"></script>
 </body>
 </html>
