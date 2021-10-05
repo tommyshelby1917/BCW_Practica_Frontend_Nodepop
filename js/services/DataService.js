@@ -20,7 +20,12 @@ export default {
       },
       body: JSON.stringify(body)
     }
-    //TODO: this.ifAuthenticed()
+
+    if (this.isAuthenticed()) {
+      const token = localStorage.getItem('AUTH_TOKEN');
+      requestConfig.headers['Authorization'] = `Bearer ${token}`;
+      console.log("Estas logueado");
+    }
 
     const response = await fetch(url, requestConfig);
     try {
@@ -46,5 +51,29 @@ export default {
     const data = await this.post(url, { username, password });
     const token = data.accesToken;
     localStorage.setItem('AUTH_TOKEN', token);
+  },
+
+  isAuthenticed: function () {
+    return localStorage.getItem('AUTH_TOKEN') !== null;
+  },
+
+  // When something fails in this function, we want to return null so that isAthenticed () works correctly
+  getAuthUserId: function () {
+    const token = localStorage.getItem('AUTH_TOKEN');
+    if (token === null) return null;
+
+    const base64Parts = token.split('.');
+    if (base64Parts.length !== 3) return null;
+
+    const base64Data = base64Parts[1];
+    try {
+      // atob() decodes a data string that has been encoded using base - 64 encoding
+      const userJSON = atob(b64Data)
+      const user = JSON.parse(userJSON);
+      return user.userId;
+    } catch (error) {
+      console.error('The token could not be decoded', error);
+      return null;
+    }
   }
 }
