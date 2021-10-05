@@ -49,8 +49,12 @@ export default {
   login: async function (username, password) {
     const url = 'http://localhost:8000/auth/login';
     const data = await this.post(url, { username, password });
-    const token = data.accesToken;
+    const token = data.accessToken;
     localStorage.setItem('AUTH_TOKEN', token);
+  },
+
+  logout: function () {
+    const token = localStorage.removeItem('AUTH_TOKEN');
   },
 
   isAuthenticed: function () {
@@ -58,7 +62,7 @@ export default {
   },
 
   // When something fails in this function, we want to return null so that isAthenticed () works correctly
-  getAuthUserId: function () {
+  getAuthUser: function () {
     const token = localStorage.getItem('AUTH_TOKEN');
     if (token === null) return null;
 
@@ -68,9 +72,9 @@ export default {
     const base64Data = base64Parts[1];
     try {
       // atob() decodes a data string that has been encoded using base - 64 encoding
-      const userJSON = atob(b64Data)
+      const userJSON = atob(base64Data)
       const user = JSON.parse(userJSON);
-      return user.userId;
+      return [user.userId, user.username];
     } catch (error) {
       console.error('The token could not be decoded', error);
       return null;

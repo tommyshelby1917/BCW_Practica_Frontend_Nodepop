@@ -6,6 +6,7 @@ export default class LoginController {
   constructor(element) {
     this.element = element;
     this.attachEventListeners();
+    this.hideFormIfIsLogged();
   }
 
   attachEventListeners() {
@@ -30,9 +31,14 @@ export default class LoginController {
         // Grita
         PubSub.publish(PubSub.events.ERROR_MESSAGE, 'Both fields are required');
       }
-
     });
-
   }
 
+  hideFormIfIsLogged() {
+    if (DataService.isAuthenticed()) {
+      this.element.classList.add('hide-element');
+    } else {
+      this.element.classList.remove('hide-element');
+    }
+  }
 }
