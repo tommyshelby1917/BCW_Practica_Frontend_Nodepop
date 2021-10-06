@@ -18,3 +18,13 @@ export function logoutView(username) {
             <button class="logout-button">Bye!</button>
           </div>`
 }
+
+export function postView(post) {
+  // TODO: Detail tweet link
+  return `<div class="tweet">
+            <p class="author">${post.name}</p>
+            <p class="author">${post.price}</p>
+            <p class="author">${post.sale}</p>
+            <img src=${post.img} width="200">
+          </div>`
+}

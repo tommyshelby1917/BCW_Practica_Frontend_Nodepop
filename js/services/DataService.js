@@ -79,5 +79,17 @@ export default {
       console.error('The token could not be decoded', error);
       return null;
     }
+  },
+
+  getPosts: async function () {
+    const url = "http://localhost:8000/api/posts";
+    const response = await fetch(url);
+    if (response.ok) {
+      const posts = await response.json();
+      console.log("Ahi lo llevas", posts);
+      return posts;
+    } else {
+      throw new Error('Unable to get the ads');
+    }
   }
 }
