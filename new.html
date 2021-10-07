@@ -10,6 +10,28 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  
+  <h1>Create a post</h1>
+  <!-- TODO: Succes error? -->
+  <!-- Message error -->
+  <div class="error-message"></div>
+
+  <!-- new post form -->
+  <div class="new-post-div">
+    <form novalidate>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required>
+      <label for="price">Price</label>
+      <input type="number" name="price" id="price">
+      <label for="image">Image</label>
+      <input type="url" name="image" id="image">
+      <input type="radio" id="sale" name="buy-sale" value="true">
+      <label for="sale">I wanna sale!</label><br>
+      <input type="radio" id="buy" name="buy-sale" value="false">
+      <label for="buy">I wanna buy!</label><br>
+      <button type="submit">Create post!</button>
+    </form>
+  </div>
+
+  <script type="module" src="./js/new.js"></script>
 </body>
 </html>

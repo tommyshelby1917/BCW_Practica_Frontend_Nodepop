@@ -86,10 +86,21 @@ export default {
     const response = await fetch(url);
     if (response.ok) {
       const posts = await response.json();
-      console.log("Ahi lo llevas", posts);
       return posts;
     } else {
       throw new Error('Unable to get the ads');
     }
+  },
+
+  createPost: async function (name, price, sale, photo = null) {
+    const url = "http://localhost:8000/api/posts";
+    console.log("Post created!");
+    return await this.post(url, {
+      name,
+      price,
+      sale,
+      photo,
+    });
   }
+
 }
