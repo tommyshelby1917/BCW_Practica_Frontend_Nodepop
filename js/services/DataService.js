@@ -82,13 +82,29 @@ export default {
   },
 
   getPosts: async function () {
-    const url = "http://localhost:8000/api/posts";
+    const url = "http://localhost:8000/api/posts?_expand=user";
     const response = await fetch(url);
     if (response.ok) {
       const posts = await response.json();
       return posts;
     } else {
       throw new Error('Unable to get the ads');
+    }
+  },
+
+  getPostDetail: async function (postID) {
+    const url = `http://localhost:8000/api/posts/${postID}?_expand=user`
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const post = await response.json();
+      return post;
+    } else {
+      if (response.status === 404) {
+        return null;
+      } else {
+        throw new Error('Error loading post');
+      }
     }
   },
 
@@ -101,6 +117,11 @@ export default {
       sale,
       photo,
     });
+  },
+
+  deletePost: async function (postID) {
+    const url = `http://localhost:8000/api/posts/${postID}`;
+    return await this.delete(url);
   }
 
 }

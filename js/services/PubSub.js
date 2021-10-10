@@ -6,7 +6,9 @@ export default {
   // Our events
   events: {
     SUCCESS_MESSAGE: 'SUCCESS_MESSAGE',
-    ERROR_MESSAGE: 'ERROR_MESSAGE'
+    ERROR_MESSAGE: 'ERROR_MESSAGE',
+    SHOW_LOADING: 'SHOW_LOADING',
+    HIDE_LOADING: 'HIDE_LOADING'
   },
 
   subscribe: function (topic, listener) {
