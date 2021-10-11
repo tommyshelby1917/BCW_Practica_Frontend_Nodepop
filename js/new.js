@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   // Message controller
-  const messageDiv = document.querySelector('.error-message');
+  const messageDiv = document.querySelector('.messages');
   const message = new MessageController(messageDiv);
 
   // Form controller

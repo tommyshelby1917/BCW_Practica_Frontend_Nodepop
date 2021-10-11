@@ -11,6 +11,6 @@ window.addEventListener('DOMContentLoaded', function () {
   const logout = document.querySelector('.logout-container');
   new LogoutController(logout);
 
-  const messages = document.querySelector('.error-message');
+  const messages = document.querySelector('.messages');
   new MessageController(messages);
 });

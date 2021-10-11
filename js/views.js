@@ -20,8 +20,10 @@ export function logoutView(username) {
 }
 
 export function postView(post) {
+
+
   return `<a href="/detail.html?id=${post.id}">
-            <div class="tweet">
+            <div class="post">
               <p class="author">${post.name}</p>
               <p class="price">${post.price}</p>
               <p class="sale">${post.sale}</p>
@@ -39,11 +41,17 @@ export function detailPostView(post) {
     button = `<button class="delete">Delete</button>`;
   }
 
-  return `<div class="tweet-detail">
+  let photo = '<img class="post-img" src="public/img/photo-icon.jpeg" width="200"></img>';
+  if (post.photo) {
+    photo = `<img class="post-img" src=${post.photo} width="200"></img>`;
+  }
+
+  return `<div class="post-detail">
             <p class="author">${post.name}</p>
             <p class="price">${post.price}</p>
             <p class="sale">${post.sale}</p>
-            <img class="post-img" src=${post.img} width="200">
+            
+            ${photo}
             ${button}
           </div>`;
 }

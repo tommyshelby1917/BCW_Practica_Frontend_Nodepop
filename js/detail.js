@@ -4,7 +4,6 @@ import postDetailController from './controllers/postDetailController.js';
 
 window.addEventListener('DOMContentLoaded', function () {
 
-  // TODO: Por algun motivo el loader no se carga
   const loaderDiv = document.querySelector('.loader');
   new LoaderController(loaderDiv);
 

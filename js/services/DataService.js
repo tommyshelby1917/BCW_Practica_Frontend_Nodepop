@@ -86,7 +86,7 @@ export default {
     const response = await fetch(url);
     if (response.ok) {
       const posts = await response.json();
-      return posts;
+      return posts.map(post => this.parsePost(post));
     } else {
       throw new Error('Unable to get the ads');
     }
@@ -98,7 +98,9 @@ export default {
 
     if (response.ok) {
       const post = await response.json();
-      return post;
+      // post.canBeDeleted = this.canBeDeleted(post);
+      console.log(post);
+      return this.parsePost(post);
     } else {
       if (response.status === 404) {
         return null;
@@ -122,6 +124,12 @@ export default {
   deletePost: async function (postID) {
     const url = `http://localhost:8000/api/posts/${postID}`;
     return await this.delete(url);
+  },
+
+  parsePost: function (post) {
+    post.canBeDeleted = post.userId === this.getAuthUser()[0];
+    post.sale = post.sale ? "I want sell" : "I want buy";
+    return post;
   }
 
 }

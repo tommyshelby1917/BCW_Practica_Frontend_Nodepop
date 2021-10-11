@@ -8,6 +8,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/loader.css">
+
 </head>
 <body>
   <h1>Create a post</h1>
@@ -23,10 +25,10 @@
       <input type="number" name="price" id="price">
       <label for="image">Image</label>
       <input type="url" name="image" id="image">
-      <input type="radio" id="sale" name="buy-sale" value="true">
       <label for="sale">I wanna sale!</label><br>
-      <input type="radio" id="buy" name="buy-sale" value="false">
+      <input type="radio" id="sale" name="buy-sale" value="1">
       <label for="buy">I wanna buy!</label><br>
+      <input type="radio" id="buy" name="buy-sale" value="0">
       <button type="submit">Create post!</button>
     </form>
   </div>
