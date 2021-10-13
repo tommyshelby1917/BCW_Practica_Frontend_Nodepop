@@ -14,7 +14,7 @@ export default class NavController {
     if (DataService.isAuthenticed()) {
       user = DataService.getAuthUser()[1];
     }
-    console.log(user);
+
     return user;
   }
 

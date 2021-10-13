@@ -80,8 +80,7 @@ export default {
     }
   },
 
-  getPosts: async function () {
-    const url = "http://localhost:8000/api/posts?_expand=user";
+  getPosts: async function (url = "http://localhost:8000/api/posts?_expand=user") {
     const response = await fetch(url);
     if (response.ok) {
       const posts = await response.json();

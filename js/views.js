@@ -3,6 +3,7 @@ export function userNavView(user) {
 
   if (user) {
     welcome = `
+    <button class="createpost-nav-button"><a href="../new.html">New post</a></button>
     <h2 class="welcome-nav">Hi ${user}!</h2>
     <button class="logout-nav-button">Logout</button>`
   } else {
