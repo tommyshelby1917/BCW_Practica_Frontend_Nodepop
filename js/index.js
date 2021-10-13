@@ -1,8 +1,13 @@
 import LoaderController from "./controllers/LoaderController.js";
 import MessageController from "./controllers/MessageControler.js";
 import PostListController from "./controllers/PostListController.js";
+import UserNavControler from "./controllers/UserNavController.js"
+
 
 window.addEventListener('DOMContentLoaded', function () {
+
+  const userNavContainer = document.querySelector('.user-container');
+  new UserNavControler(userNavContainer);
 
   // Loader controller
   const loaderDiv = document.querySelector('.loader');

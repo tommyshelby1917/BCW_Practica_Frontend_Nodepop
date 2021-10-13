@@ -18,7 +18,7 @@ export default class LogoutController {
   }
 
   logoutEventListener() {
-    const button = this.element.querySelector('.logout-button')
+    const button = this.element.querySelector('.logout-nav-button');
     button.addEventListener('click', this.userLogout);
   }
 

@@ -24,7 +24,6 @@ export default {
     if (this.isAuthenticed()) {
       const token = localStorage.getItem('AUTH_TOKEN');
       requestConfig.headers['Authorization'] = `Bearer ${token}`;
-      console.log("Estas logueado");
     }
 
     const response = await fetch(url, requestConfig);
@@ -98,8 +97,6 @@ export default {
 
     if (response.ok) {
       const post = await response.json();
-      // post.canBeDeleted = this.canBeDeleted(post);
-      console.log(post);
       return this.parsePost(post);
     } else {
       if (response.status === 404) {
@@ -127,7 +124,9 @@ export default {
   },
 
   parsePost: function (post) {
-    post.canBeDeleted = post.userId === this.getAuthUser()[0];
+    if (this.isAuthenticed()) {
+      post.canBeDeleted = post.userId === this.getAuthUser()[0];
+    }
     post.sale = post.sale ? "I want sell" : "I want buy";
     return post;
   }

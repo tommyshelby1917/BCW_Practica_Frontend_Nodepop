@@ -3,6 +3,7 @@ import LoginController from './controllers/LoginController.js';
 import LogoutController from './controllers/LogoutController.js';
 
 
+
 window.addEventListener('DOMContentLoaded', function () {
 
   const form = document.querySelector('form');
