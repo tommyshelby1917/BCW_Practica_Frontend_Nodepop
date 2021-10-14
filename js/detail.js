@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function () {
   // We get the ID of the post that we want charge
   const postID = new URLSearchParams(window.location.search).get('id');
 
-  const postDiv = document.querySelector('.post');
+  const postDiv = document.querySelector('.post-container');
   new PostDetailController(postDiv, postID);
 
 });

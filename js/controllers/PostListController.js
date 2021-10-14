@@ -22,8 +22,7 @@ export default class PostListController {
         });
       } else {
         const noPostFound = document.createElement('h2');
-        noPostFound.classList.add('post-not-found');
-        noPostFound.textContent = "No post found";
+        noPostFound.innerHTML = postView(null);
         this.element.appendChild(noPostFound);
       }
     } catch (error) {
@@ -34,13 +33,17 @@ export default class PostListController {
   }
 
   clearPosts() {
-    window.scrollTo(0, 0);
-
     const posts = document.querySelectorAll('article');
     if (posts) {
       posts.forEach((e) => {
         e.remove();
       })
+    }
+
+    const notFoundMessage = document.querySelector('.not-found-container');
+    console.log(notFoundMessage);
+    if (notFoundMessage) {
+      notFoundMessage.remove();
     }
   }
 }

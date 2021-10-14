@@ -19,12 +19,13 @@ export default class PostFormController {
 
         const name = data.get('name');
         const price = data.get('price');
+        const description = data.get('description');
         const sale = Boolean(Number(data.get('buy-sale')));
         console.log(sale);
         const image = data.get('image');
 
         try {
-          const result = await DataService.createPost(name, price, sale, image);
+          const result = await DataService.createPost(name, price, description, sale, image);
           PubSub.publish(PubSub.events.SUCCESS_MESSAGE, 'Post created!');
         } catch (error) {
           PubSub.publish(PubSub.events.ERROR_MESSAGE, error);

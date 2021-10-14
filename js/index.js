@@ -7,6 +7,7 @@ import UserNavControler from "./controllers/UserNavController.js"
 
 window.addEventListener('DOMContentLoaded', function () {
 
+  // Nav controller
   const userNavContainer = document.querySelector('.user-container');
   new UserNavControler(userNavContainer);
 

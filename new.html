@@ -7,36 +7,64 @@
   <title>New post</title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/new.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/header.css">
 
 </head>
 
-<header>
-  <div class="nav-container"></div>
-</header>
 
 <body>
-  <h1>Create a post</h1>
   
-  <div class="messages"></div>
+  <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="/public/img/logo.png" alt="logo" width="100"></a>
+    </div>
+    <div class="nav-container">
+      <div class="user-container">
+        <div class="login-logout-nav"></div>
+        <div class="new-post-nav"></div>
+      </div>
+    </div>
+  </header>
 
-  <!-- new post form -->
-  <div class="new-post-div">
-    <form novalidate>
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" required>
-      <label for="price">Price</label>
-      <input type="number" name="price" id="price">
-      <label for="image">Image</label>
-      <input type="url" name="image" id="image">
-      <label for="sale">I wanna sale!</label><br>
-      <input type="radio" id="sale" name="buy-sale" value="1">
-      <label for="buy">I wanna buy!</label><br>
-      <input type="radio" id="buy" name="buy-sale" value="0">
-      <button type="submit">Create post!</button>
-    </form>
+  <div class="new-post-full-container">
+    <h1 id="create-post-title">Create a post</h1>
+    
+    <div class="messages"></div>
+  
+    <!-- new post form -->
+    <div class="new-post-div">
+      <form novalidate>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <label for="price">Price</label>
+        <input type="number" name="price" id="price">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10"></textarea>
+        <label for="image">Image (URL)</label>
+        <input type="url" name="image" id="image">
+        <div class="radio-container">
+          <label for="sale">I wanna sale!</label><br>
+          <input type="radio" id="sale" name="buy-sale" value="1">
+        </div>
+        <div class="radio-container">
+          <label for="buy">I wanna buy!</label><br>
+          <input type="radio" id="buy" name="buy-sale" value="0">
+        </div>
+        <button type="submit">Create post!</button>
+      </form>
+    </div>
   </div>
+
+  <footer>
+    <div class="footer-container">
+      <p>Nodepop © 2021</p>
+      <p>Created by <a class="linkedin" href="https://www.linkedin.com/in/josep-miquel-arenas-beltran/">Josep Miquel</a></p>
+    </div>
+  </footer>
 
   <script type="module" src="./js/new.js"></script>
 </body>

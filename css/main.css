@@ -1,8 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
+* {
+  font-family: 'Montserrat' !important;
+  color: var(--black-junts);
+}
+
+:root {
+  --yellow-node: #F6BD41;
+  --blue-node: #092857;
+  --black-node: #191919;
+}
+
+p {
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  cursor: grab;
+}
+
 .hide-element {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  background-color: #f6bd41;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  padding: 50px 20px;
+}
+
+.main-title-container {
+  margin-bottom: 20px;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.main-slogan {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+/* Main post list page */
+
+main {
+  background-color: #eee;
+  padding: 50px 20px;
+}
+
+.section-title-container {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 25px;
+}
+
+.search-container {
+  margin-bottom: 30px;
+}
+
+.search-title {
+  margin-bottom: 15px;
+}
+
+#search {
+  padding: 10px;
+  width: 400px;
+}
+
+#search::placeholder {
+  font-size: 20px;
+}
+
+.posts-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
 .post {
-  border: black solid 1px;
+  background-color: #b7c3d5;
+  background-image: url("https://www.transparenttextures.com/patterns/billie-holiday.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%;
+  margin: 10px 10px 10px 0;
+  padding: 20px;
+}
+
+.post p {
+  font-size: 18px;
+}
+
+.post:hover {
+  background-color: #f9eacb;
+  transition: all .3s;
+  transform: scale(0.95);
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 20px 0;
+}
+
+.photo-container {
+  position: relative;
+}
+
+.name-post {
+  font-weight: bold;
+}
+
+.sale-post {
+  position: absolute;
+  bottom: 0;
+  right:0;
+  margin-top: 10px;
+  font-weight: normal;
+  background-color: #092857;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 5px 0;
+}
+
+.showmore-button {
+  background-color: var(--yellow-node);
+  font-size: 18px;
+}
+
+.showmore-button:hover {
+  background-color: var(--blue-node);
+  color: #fff;
+}
+
+/* Post detail page */
+.post-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.post-detail-container {
+  display: flex;
+  align-content: center;
+}
+
+.post-detail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+
+.title-detail {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+.post-detail-photo {
+  margin: 20px 0;
+}
+
+.post-detail-side {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.sale-detail-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.sale-detail {
+  background-color: #f9eacb;
+  padding: 10px;
+}
+
+.price-detail {
+  font-size: 50px;
+  font-weight: normal;
+  background-color: #b7c3d5;
+  border-radius: 50%;
+  padding: 20px;
+  color: #000000;
+  text-align: center;
+}
+
+.author-edit-container {
+  margin-top: 30px;
+}
+
+.description-detail {
+  text-align: justify;
+}
+
+.delete {
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: normal;
+  background-color: #092857;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.delete:hover {
+  background-color: var(--yellow-node);
+  color: #000;
+  transition: all .3s;
+  transform: scale(0.9);
+}
+
+/* Footer */
+footer {
+  background-color: var(--blue-node);
+}
+
+.footer-container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.linkedin {
+  color: var(--yellow-node);
+}
+
+.linkedin:hover {
+  color: white;
+  text-decoration:underline
 }

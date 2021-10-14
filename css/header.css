@@ -1,0 +1,55 @@
+/* header */
+header {
+  background-color: var(--blue-node);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+header button {
+  font-size: 15px;
+  border-radius: 5%;
+  padding: 5px;
+}
+
+header button:hover {
+  transform: scale(0.9);
+  transition: all .3s;
+}
+
+header h2 {
+  color: #fff;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.user-container {
+  display: flex;
+}
+
+.welcome-nav-title {
+  text-align: center;
+}
+
+.login-logout-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logout-nav-button {
+  margin-top: 10px;
+  background-color: #fff;
+  border: 0;
+}
+
+.createpost-nav-button {
+  margin-top: 10px;
+  background-color: var(--yellow-node);
+  border: 0;
+  color: var(--blue-node);
+  font-weight: bold;
+}
+

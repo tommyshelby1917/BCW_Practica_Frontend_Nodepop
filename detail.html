@@ -7,20 +7,20 @@
   <title>Post</title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/loader.css">
   <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+
 </head>
 <body>
   
 
   <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="/public/img/logo.png" alt="logo" width="100"></a>
+    </div>
     <div class="nav-container">
-      <div class="logo-container">
-        <img src="/public/img/logo.png" alt="">
-      </div>
-      <div class="search-container">
-        <div class="search-nav"></div>
-      </div>
       <div class="user-container">
         <div class="login-logout-nav"></div>
         <div class="new-post-nav"></div>
@@ -30,7 +30,14 @@
 
   <div class="loader"></div>
   <div class="messages"></div>
-  <div class="post"></div>
+  <div class="post-container"></div>
+
+  <footer>
+    <div class="footer-container">
+      <p>Nodepop © 2021</p>
+      <p>Created by <a class="linkedin" href="https://www.linkedin.com/in/josep-miquel-arenas-beltran/">Josep Miquel</a></p>
+    </div>
+  </footer>
 
   <script type="module" src="./js/detail.js"></script>
 </body>

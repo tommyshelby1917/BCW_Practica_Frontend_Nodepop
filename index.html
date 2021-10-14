@@ -7,20 +7,20 @@
   <title>Nodepop</title>
 
   <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/header.css">
+
 
 </head>
 <body>
 
   <header>
+    <div class="logo-container">
+      <a href="index.html"><img src="/public/img/logo.png" alt="logo" width="100"></a>
+    </div>
     <div class="nav-container">
-      <div class="logo-container">
-        <img src="/public/img/logo.png" alt="">
-      </div>
-      <div class="search-container">
-        <div class="search-nav"></div>
-      </div>
       <div class="user-container">
         <div class="login-logout-nav"></div>
         <div class="new-post-nav"></div>
@@ -28,21 +28,38 @@
     </div>
   </header>
 
-  <h1>Bienvenid@ a Nodepop</h1>
+  <section class="hero">
+    <div class="main-title-container">
+      <h1 class="main-title">Nodepop</h1>
+    </div>
+    <div class="main-slogan-container">
+      <h2 class="main-slogan">We help you sell what you don't need. We help you find what you want.</h2>
+    </div>
+  </section>
+  
+  <main>
+    <div class="section-title-container">
+      <h2 class="section-title">Last announces</h2>
+    </div>
+  
+    <div class="search-container">
+      <p class="search-title">Are you searching for something specific?</p>
+      <input type="search" name="search" id="search" placeholder="Type a product...">
+    </div>
+  
+    <div class="messages"></div>
 
-  <h2>Anuncios</h2>
+    <!-- Posts list -->
+    <div class="loader"></div>
+    <div class="posts-list"></div>
+  </main>
 
-  <div class="search-container">
-    <input type="search" name="search" id="search" placeholder="Search a post...">
-  </div>
-
-  <div class="messages"></div>
-
-  <div class="new-post"></div>
-
-  <!-- Posts list -->
-  <div class="loader"></div>
-  <div class="posts-list"></div>
+  <footer>
+    <div class="footer-container">
+      <p>Nodepop © 2021</p>
+      <p>Created by <a class="linkedin" href="https://www.linkedin.com/in/josep-miquel-arenas-beltran/">Josep Miquel</a></p>
+    </div>
+  </footer>
 
   <script type="module" src="/js/index.js"></script>
 </body>

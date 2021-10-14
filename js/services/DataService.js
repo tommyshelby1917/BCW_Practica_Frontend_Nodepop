@@ -1,3 +1,5 @@
+// TODO: FORMATEAR FORMULARIO PARA QUE NO PUEDAN INYECTAR SCRIPT!!!
+
 export default {
 
   delete: async function (url, body = {}) {
@@ -106,12 +108,13 @@ export default {
     }
   },
 
-  createPost: async function (name, price, sale, photo = null) {
+  createPost: async function (name, price, description, sale, photo = null) {
     const url = "http://localhost:8000/api/posts";
     console.log("Post created!");
     return await this.post(url, {
       name,
       price,
+      description,
       sale,
       photo,
     });
