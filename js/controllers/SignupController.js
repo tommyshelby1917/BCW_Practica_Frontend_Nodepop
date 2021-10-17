@@ -51,6 +51,9 @@ export default class SignupController {
           const result = await DataService.registerUser(username, password);
           // Gritamos
           PubSub.publish(PubSub.events.SUCCESS_MESSAGE, 'Bienvenido a Nodepop. Tu usuario ha sido registrado');
+          setTimeout(function () {
+            window.location.href = '/login.html';
+          }, 3000);
         } catch (error) {
           PubSub.publish(PubSub.events.ERROR_MESSAGE, error);
         }

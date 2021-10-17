@@ -16,28 +16,14 @@ export default class MessageController {
     })
   }
 
-  CloseEventListener() {
-    const button = this.element.querySelector('button');
-    // TODO: puede que esto no funcione por el callback
-    button.addEventListener('click', () => {
-      this.hideError();
-    });
-  }
-
   showError(message) {
     this.element.innerHTML = errorView(message);
-    this.CloseEventListener();
   }
 
   showSucces(message) {
     this.element.innerHTML = succesView(message);
-    this.CloseEventListener();
   }
 
-  hideError() {
-    // TODO: this.element.innerHTML = ''
-    this.element.classList.toggle('hide-element');
-  }
 
 }
 

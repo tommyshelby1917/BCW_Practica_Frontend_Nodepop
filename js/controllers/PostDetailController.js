@@ -34,7 +34,7 @@ export default class postDetailController {
 
           try {
             await DataService.deletePost(post.id);
-            window.location.href = '/?message=post-deleted';
+            window.location.href = '/?message=post-created';
           } catch (error) {
             PubSub.publish(PubSub.events.ERROR_MESSAGE, error);
             button.removeAttribute('disabled');

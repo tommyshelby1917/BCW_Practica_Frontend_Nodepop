@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/header.css">
-
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/login-signup.css">
 
 </head>
 
@@ -20,12 +20,9 @@
 </header>
 
 <body>
-  
-  <div class="messages"></div>
-
-  
   <!-- Login form -->
   <div class="container-form">
+    <h1 class="login-title">Login Nodepop</h1>
     <form novalidate>
       <div class="user-div">
         <input type="text" name="username" id="username" placeholder="Choose a username" required autofocus>
@@ -34,12 +31,15 @@
         <input type="password" name="password" id="password" placeholder="Enter your password" required>
       </div>
       <div class="submit-div">
-        <button type="submit">Login</button>
+        <button type="submit" class="login-submit">Login</button>
+      </div>
+      <div class="messages"></div>
+      <div class="call-to-action-container">
+        <a href="./register.html">Are you not a member? Join us!</a>
       </div>
     </form>
+    <a href="./index.html"><button class="backtohome-button">Back to homepage</button></a>
   </div>
-
-  <div class="logout-container"></div>
   
   <script type="module" src="./js/login.js"></script>
 </body>

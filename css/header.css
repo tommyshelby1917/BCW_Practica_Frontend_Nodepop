@@ -45,7 +45,7 @@ header h2 {
   border: 0;
 }
 
-.createpost-nav-button {
+.createpost-nav-button, .register-nav-button {
   margin-top: 10px;
   background-color: var(--yellow-node);
   border: 0;

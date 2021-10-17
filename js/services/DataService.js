@@ -129,6 +129,11 @@ export default {
     if (this.isAuthenticed()) {
       post.canBeDeleted = post.userId === this.getAuthUser()[0];
     }
+
+    post.name = post.name.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    post.description = post.description.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    post.photo = post.photo.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
     post.sale = post.sale ? "I want sell" : "I want buy";
     return post;
   }

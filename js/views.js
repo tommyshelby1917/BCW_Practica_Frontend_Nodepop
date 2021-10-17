@@ -11,7 +11,7 @@ export function userNavView(user) {
   } else {
     welcome = `
               <div class="login-logout-nav">
-                <button class="login-nav-button"><a href="../login.html">Enter</a></button>
+                <button class="login-nav-button"><a href="../login.html">Login</a></button>
                 <button class="register-nav-button"><a href="../register.html">Join us!</a></button>
               </div>`
   }
@@ -22,14 +22,12 @@ export function userNavView(user) {
 export function errorView(message) {
   return `<div class="error">
             ${message}
-            <button>Cerrar</button>
           </div>`;
 }
 
 export function succesView(message) {
   return `<div class="succes">
             ${message}
-            <button>Cerrar</button>
           </div>`;
 }
 
@@ -113,6 +111,7 @@ export function detailPostView(post) {
               </div>
               <div class="post-detail-delete">
                 ${button}
+                <a href="./index.html"><button class="back-button">Back to home</button></a>
               </div>
             </div>
           </div>`;

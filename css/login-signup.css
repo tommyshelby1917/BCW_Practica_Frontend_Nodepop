@@ -1,0 +1,94 @@
+header {
+  display: none;
+}
+
+body {
+  background-color: #092857;
+  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-v2.png");
+}
+
+.login-title {
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 40px;
+  font-weight: 100;
+}
+
+.container-form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f6bd41;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+form input {
+  font-size: 20px;
+  border: 0;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+form button[type=submit] {
+  background: var(--blue-node);
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  border: 0;
+  font-size: 15px;
+}
+form button[type=submit]:hover {
+  background: var(--yellow-node);
+  color: var(--blue-node);
+  border: 1px solid var(--blue-node);
+  transform: scale(1.1);
+  transition: all .3s;
+}
+
+.backtohome-button {
+  margin-top: 50px;
+  background-color: #fff;
+  border: 0;
+  color: var(--blue-node);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.backtohome-button:hover {
+  background-color: var(--yellow-node);
+  transform: scale(0.9);
+  transition: all .3s;
+}
+
+.close-message {
+  background: var(--blue-node);
+  color: #fff;
+}
+
+.call-to-action-container {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgb(255, 140, 0, .5); 
+  border-radius: 5%;
+}
+
+.call-to-action-container a {
+  color: var(--blue-node);
+}
+
+.call-to-action-container:hover {
+  background: rgb(255, 140, 0, .9); 
+}

@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "username": "josep",
+      "password": "$2b$10$1jQjVSo0YcOyj18vQetqlucUVpTBNTni2ljIxE1MMFQCgXaJnr526",
+      "id": 6
+    }
+  ],
+  "posts": [
+    {
+      "name": "iphone",
+      "price": "120",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus libero eget ipsum placerat finibus. Sed egestas nisl bibendum elit tristique blandit. Duis elementum arcu id massa vehicula aliquam. Aliquam erat volutpat. Sed a eleifend odio. Donec hendrerit ac justo in laoreet. In hac habitasse platea dictumst.\r\n\r\nPhasellus sed pulvinar urna. Curabitur nec vulputate risus. Donec placerat condimentum arcu nec auctor. Aenean metus diam, dignissim eget metus et, ornare dapibus elit. Nullam porttitor vulputate facilisis. Aenean dignissim et sapien non tincidunt. Aliquam lorem ante, semper in aliquet sit amet, volutpat et metus. Phasellus pharetra convallis ante, at blandit felis dapibus ut. Vestibulum aliquet dui at urna gravida condimentum. Suspendisse vel sem ac sem dapibus semper. Nunc maximus, ante vel iaculis scelerisque, tortor mi tempus dui, sit amet auctor dui arcu et mauris.",
+      "sale": true,
+      "photo": "https://www.proximus.be/dam/jcr:72657497-a878-4759-b96e-df467463e34b/cdn/sites/iportal/images/products/device/p/px-apple-iphone-se-2021-256gb-red/detail/px-apple-iphone-se-2021-256gb-red-XS-1~2021-09-06-15-44-18~cache.png",
+      "userId": 6,
+      "updatedAt": "2021-10-14T15:13:24.025Z",
+      "id": 1
+    },
+    {
+      "name": "Opel Astra",
+      "price": "1400",
+      "description": "Climatisation\r\nSystème de navigation, usb\r\nRégulateur de vitesse\r\nVerrouillage centrale\r\nOrdinateur de bord\r\nParctronic arrière\r\nJantes alliage 18\r\nEsp,abs\r\nSièges semi cuir\r\nVitres électriques avant/arrière\r\nVitre arrière teinté\r\nFrein à main électrique\r\nEuro 5 - 6 vitesses\r\nPhares de jour\r\nPhares automatique\r\nPhares antibrouillard\r\nRétroviseurs électriques\r\nProtection pare-brise et vitre hydrophobe\r\nEssuie glace automatique (nouveau)",
+      "sale": false,
+      "photo": "https://i.ebayimg.com/00/s/NzY4WDEwMjQ=/z/yRoAAOSwGlxhaGLr/$_85.JPG",
+      "userId": 6,
+      "updatedAt": "2021-10-15T14:05:25.220Z",
+      "id": 2
+    }
+  ]
+}

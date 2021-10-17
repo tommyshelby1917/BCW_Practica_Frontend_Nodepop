@@ -27,6 +27,9 @@ export default class PostFormController {
         try {
           const result = await DataService.createPost(name, price, description, sale, image);
           PubSub.publish(PubSub.events.SUCCESS_MESSAGE, 'Post created!');
+          setTimeout(function () {
+            window.location.href = '/?message=post-created';
+          }, 2000);
         } catch (error) {
           PubSub.publish(PubSub.events.ERROR_MESSAGE, error);
         }

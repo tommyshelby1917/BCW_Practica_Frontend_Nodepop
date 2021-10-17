@@ -28,6 +28,21 @@ a {
   text-decoration: none;
 }
 
+/* Messages controller  */
+.succes {
+  background: #174917;
+  color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.error {
+  background: #fa1e1e;
+  color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+}
+
 /* Hero */
 .hero {
   background-color: #f6bd41;
@@ -40,13 +55,78 @@ a {
 }
 
 .main-title {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 50px;
+  margin-bottom: 30px;
+  color: var(--blue-node);
 }
+
+
 
 .main-slogan {
   font-size: 30px;
   font-weight: 100;
+	-webkit-animation: vibrate-1 0.3s linear infinite both;
+  animation: vibrate-1 0.3s linear infinite both;
+
+}
+
+@-webkit-keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@keyframes vibrate-1 {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+.hero-word {
+  color: var(--blue-node);
+  font-weight: bold;
 }
 
 /* Main post list page */
@@ -100,6 +180,11 @@ main {
 
 .post p {
   font-size: 18px;
+}
+
+.post-img {
+    height: 200px;
+    object-fit: contain;
 }
 
 .post:hover {
@@ -222,10 +307,25 @@ main {
 }
 
 .delete:hover {
+  background-color: #fff;
+  color: var(--blue-node);
+  border: 1px solid var(--blue-node);
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: normal;
   background-color: var(--yellow-node);
+  width: 100%;
+  text-align: center;
   color: #000;
-  transition: all .3s;
-  transform: scale(0.9);
+}
+
+.back-button:hover {
+  background-color: #fff;
+  color: var(--blue-node);
+  border: 1px solid var(--blue-node);
 }
 
 /* Footer */
