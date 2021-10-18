@@ -32,7 +32,6 @@ export default {
     try {
       const data = await response.json()
       if (response.ok) {
-        console.log("Request to backend was succesfull");
         return data;
       } else {
         throw new Error(data.message);
@@ -110,7 +109,6 @@ export default {
 
   createPost: async function (name, price, description, sale, photo = null) {
     const url = "http://localhost:8000/api/posts";
-    console.log("Post created!");
     return await this.post(url, {
       name,
       price,

@@ -12,7 +12,6 @@ export default class postDetailController {
   async loadPost(postID) {
     PubSub.publish(PubSub.events.SHOW_LOADING);
     try {
-      console.log(" Loading post");
       const post = await DataService.getPostDetail(postID);
       this.element.innerHTML = detailPostView(post);
       this.addDeleteButtonEventListener(post);
@@ -24,7 +23,7 @@ export default class postDetailController {
   }
 
   addDeleteButtonEventListener(post) {
-    const button = this.element.querySelector('button');
+    const button = this.element.querySelector('.delete');
     if (button) {
       button.addEventListener('click', async () => {
         const answer = confirm('Are you sure you want to delete the post?');

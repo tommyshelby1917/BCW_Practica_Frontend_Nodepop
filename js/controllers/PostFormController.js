@@ -21,7 +21,6 @@ export default class PostFormController {
         const price = data.get('price');
         const description = data.get('description');
         const sale = Boolean(Number(data.get('buy-sale')));
-        console.log(sale);
         const image = data.get('image');
 
         try {

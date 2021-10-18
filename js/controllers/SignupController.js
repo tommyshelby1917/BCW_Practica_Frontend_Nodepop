@@ -46,6 +46,9 @@ export default class SignupController {
         try {
           const data = new FormData(this);
           const username = data.get('username');
+          if (!/^[0-9a-z]+$/.test(username)) {
+            throw new Error('The username has to be alphanumeric');
+          }
           const password = data.get('password');
           // We register the user with the data collected
           const result = await DataService.registerUser(username, password);

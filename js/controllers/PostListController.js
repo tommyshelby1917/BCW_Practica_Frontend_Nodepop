@@ -41,7 +41,6 @@ export default class PostListController {
     }
 
     const notFoundMessage = document.querySelector('.not-found-container');
-    console.log(notFoundMessage);
     if (notFoundMessage) {
       notFoundMessage.remove();
     }
