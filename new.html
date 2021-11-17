@@ -1,71 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New post</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New post</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/new.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/loader.css">
-  <link rel="stylesheet" href="css/header.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/new.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/header.css" />
+  </head>
 
-</head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="index.html"
+          ><img src="/public/img/logo.png" alt="logo" width="100"
+        /></a>
+      </div>
+      <div class="nav-container">
+        <div class="user-container">
+          <div class="login-logout-nav"></div>
+          <div class="new-post-nav"></div>
+        </div>
+      </div>
+    </header>
 
+    <div class="new-post-full-container">
+      <h1 id="create-post-title">Create a post</h1>
 
-<body>
-  
-  <header>
-    <div class="logo-container">
-      <a href="index.html"><img src="/public/img/logo.png" alt="logo" width="100"></a>
-    </div>
-    <div class="nav-container">
-      <div class="user-container">
-        <div class="login-logout-nav"></div>
-        <div class="new-post-nav"></div>
+      <!-- new post form -->
+      <div class="new-post-div">
+        <form>
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required />
+          <label for="price">Price</label>
+          <input type="number" name="price" id="price" required />
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <label for="image">Image (URL)</label>
+          <input type="url" name="image" id="image" required />
+          <div class="radio-container">
+            <label for="sale">I wanna sale!</label><br />
+            <input type="radio" id="sale" name="buy-sale" value="1" />
+          </div>
+          <div class="radio-container">
+            <label for="buy">I wanna buy!</label><br />
+            <input type="radio" id="buy" name="buy-sale" value="0" checked />
+          </div>
+          <button type="submit">Create post!</button>
+          <!-- Messages from controller -->
+          <div class="messages"></div>
+        </form>
       </div>
     </div>
-  </header>
 
-  <div class="new-post-full-container">
-    <h1 id="create-post-title">Create a post</h1>
-    
-    <!-- new post form -->
-    <div class="new-post-div">
-      <form novalidate>
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" required>
-        <label for="price">Price</label>
-        <input type="number" name="price" id="price">
-        <label for="description">Description</label>
-        <textarea name="description" id="description" cols="30" rows="10"></textarea>
-        <label for="image">Image (URL)</label>
-        <input type="url" name="image" id="image">
-        <div class="radio-container">
-          <label for="sale">I wanna sale!</label><br>
-          <input type="radio" id="sale" name="buy-sale" value="1">
-        </div>
-        <div class="radio-container">
-          <label for="buy">I wanna buy!</label><br>
-          <input type="radio" id="buy" name="buy-sale" value="0">
-        </div>
-        <button type="submit">Create post!</button>
-        <!-- Messages from controller -->
-        <div class="messages"></div>
-      </form>
-    </div>
-  </div>
+    <footer>
+      <div class="footer-container">
+        <p>Nodepop © 2021</p>
+        <p>
+          Created by
+          <a
+            class="linkedin"
+            href="https://www.linkedin.com/in/josep-miquel-arenas-beltran/"
+            >Josep Miquel</a
+          >
+        </p>
+      </div>
+    </footer>
 
-  <footer>
-    <div class="footer-container">
-      <p>Nodepop © 2021</p>
-      <p>Created by <a class="linkedin" href="https://www.linkedin.com/in/josep-miquel-arenas-beltran/">Josep Miquel</a></p>
-    </div>
-  </footer>
-
-  <script type="module" src="./js/new.js"></script>
-</body>
+    <script type="module" src="./js/new.js"></script>
+  </body>
 </html>

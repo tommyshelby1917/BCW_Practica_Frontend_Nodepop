@@ -20,12 +20,13 @@
   display: flex;
   flex-direction: column;
   background-color: #f6bd41;
-  background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+  background-image: url('https://www.transparenttextures.com/patterns/axiom-pattern.png');
   padding: 50px;
   border-radius: 5%;
 }
 
-.new-post-div form input, textarea {
+.new-post-div form input,
+textarea {
   margin-bottom: 10px;
   margin-top: 5px;
 }
@@ -48,8 +49,14 @@
 .new-post-div form button:hover {
   background-color: var(--yellow-node);
   color: #000;
-  transition: all .3s;
+  transition: all 0.3s;
   transform: scale(0.9);
   border: 1px solid #000;
   cursor: grab;
+}
+
+.new-post-div form button:disabled {
+  background: rgb(121, 121, 121);
+  color: rgb(182, 182, 182);
+  cursor: initial;
 }

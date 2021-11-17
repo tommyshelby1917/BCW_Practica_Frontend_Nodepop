@@ -1,15 +1,14 @@
-import DataService from "../services/DataService.js";
-import PubSub from "../services/PubSub.js";
+import DataService from '../services/DataService.js';
+import PubSub from '../services/PubSub.js';
 
 export default class PostFormController {
-
   constructor(element) {
     this.element = element;
     this.attachEventListeners();
   }
 
   attachEventListeners() {
-    this.element.addEventListener('submit', async event => {
+    this.element.addEventListener('submit', async (event) => {
       // We prevent the form from being sent so that we can control it.
       event.preventDefault();
 
@@ -24,7 +23,13 @@ export default class PostFormController {
         const image = data.get('image');
 
         try {
-          const result = await DataService.createPost(name, price, description, sale, image);
+          const result = await DataService.createPost(
+            name,
+            price,
+            description,
+            sale,
+            image
+          );
           PubSub.publish(PubSub.events.SUCCESS_MESSAGE, 'Post created!');
           setTimeout(function () {
             window.location.href = '/?message=post-created';
@@ -35,6 +40,4 @@ export default class PostFormController {
       }
     });
   }
-
-
 }

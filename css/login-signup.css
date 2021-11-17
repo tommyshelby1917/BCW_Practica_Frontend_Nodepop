@@ -4,7 +4,7 @@ header {
 
 body {
   background-color: #092857;
-  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-v2.png");
+  background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre-v2.png');
 }
 
 .login-title {
@@ -28,7 +28,7 @@ form {
   align-items: center;
   justify-content: center;
   background-color: #f6bd41;
-  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
   height: 400px;
   width: 400px;
   border-radius: 50%;
@@ -41,7 +41,7 @@ form input {
   text-align: center;
 }
 
-form button[type=submit] {
+form button[type='submit'] {
   background: var(--blue-node);
   color: #fff;
   padding: 10px;
@@ -49,12 +49,16 @@ form button[type=submit] {
   border: 0;
   font-size: 15px;
 }
-form button[type=submit]:hover {
+form button[type='submit']:hover {
   background: var(--yellow-node);
   color: var(--blue-node);
-  border: 1px solid var(--blue-node);
-  transform: scale(1.1);
-  transition: all .3s;
+  transition: all 0.3s;
+}
+
+form button[type='submit']:disabled {
+  background: rgb(121, 121, 121);
+  color: rgb(182, 182, 182);
+  cursor: initial;
 }
 
 .backtohome-button {
@@ -70,7 +74,7 @@ form button[type=submit]:hover {
 .backtohome-button:hover {
   background-color: var(--yellow-node);
   transform: scale(0.9);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .close-message {
@@ -81,7 +85,7 @@ form button[type=submit]:hover {
 .call-to-action-container {
   margin-top: 20px;
   padding: 10px;
-  background: rgb(255, 140, 0, .5); 
+  background: rgb(255, 140, 0, 0.5);
   border-radius: 5%;
 }
 
@@ -90,5 +94,5 @@ form button[type=submit]:hover {
 }
 
 .call-to-action-container:hover {
-  background: rgb(255, 140, 0, .9); 
+  background: rgb(255, 140, 0, 0.9);
 }
